@@ -16,10 +16,13 @@ void loop()
 {
 
 // Read filtered EMG signal as anlog input
+int sensorValue = analogRead(A0);
+float voltage= sensorValue * (5.0 / 1023.0);
 
+voltage_str = String(voltage);
 
+//const char text[] = "Your Button State is HIGH";
 
-const char text[] = "Your Button State is HIGH";
-radio.write(&text, sizeof(text));                  //Sending the message to receiver
+radio.write(&voltage_str, sizeof(voltage_str));                  //Sending the message to receiver
 
 }
