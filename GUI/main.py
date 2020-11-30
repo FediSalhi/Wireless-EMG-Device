@@ -15,7 +15,7 @@ import pandas as pd
 
 
 class serialPlot:
-    def __init__(self, serialPort='COM5', serialBaud=38400, plotLength=100, dataNumBytes=2, numPlots=1):
+    def __init__(self, serialPort='COM5', serialBaud=9600, plotLength=100, dataNumBytes=2, numPlots=1):
         self.port = serialPort
         self.baud = serialBaud
         self.plotMaxLength = plotLength
